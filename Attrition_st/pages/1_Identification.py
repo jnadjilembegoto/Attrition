@@ -125,10 +125,10 @@ def Info_worker ():
 def treatInput(data):
     st.write("dummérisation en cours...")
     #importer la base de données
-   # script_dir = os.path.dirname(__file__) 
-    #df_full_path = os.path.join(script_dir, 'Exam_ML_ISE-2.xlsx')
-    base=pd.read_excel('Exam_ML_ISE-2.xlsx',sheet_name="JeuxDeDonnées")
-    base_dummy=pd.read_excel('Exam_ML_ISE-2.xlsx',sheet_name="data_dummy")
+    script_dir = os.path.dirname(__file__) 
+    df_full_path = os.path.join(script_dir, 'Exam_ML_ISE-2.xlsx')
+    base=pd.read_excel(df_full_path,sheet_name="JeuxDeDonnées")
+    base_dummy=pd.read_excel(df_full_path,sheet_name="data_dummy")
     #encodage des variables catégorielles
     dum =['Department','EducationField','JobRole','État_civil']  
     #dummérisation manuelle
