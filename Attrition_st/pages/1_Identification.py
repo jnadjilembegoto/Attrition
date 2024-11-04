@@ -150,7 +150,8 @@ def prediction(data):
     treatInput(data)
     st.write("Prédiction en cours...")
     #chargement du modèle préenrégistré
-    modele=joblib.load(filename="rf_model.joblib")
+    model_path = os.path.join(os.path.dirname(__file__), 'rf_model.joblib')
+    modele = joblib.load(model_path)
     attrition=modele.predict(data)
     st.success("La prédiction a été réalisée avec succès!")
 
